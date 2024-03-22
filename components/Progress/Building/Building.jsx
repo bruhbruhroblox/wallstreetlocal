@@ -7,7 +7,7 @@ import Loading from "components/Loading/Loading";
 
 const Building = (props) => {
   return (
-    <Link href={`/filers/${props.cik}?persist=true`}>
+    <Link href={`/filers/${props.cik}?persist=true`} legacyBehavior>
       <div className={[styles["building"]].join(" ")}>
         <span
           className={[styles["building-text"], fontLight.className].join(" ")}

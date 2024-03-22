@@ -49,7 +49,7 @@ const Select = (props) => {
 
   const date =
     useSelector((state) =>
-      state.filer.dates.find((d) => d.accessor == propDate.accessor)
+      state.filer.dates.find((d) => d.accessor == propDate.accessor),
     ) || propDate;
   const open = date.open;
   const time = date.timestamp;
@@ -63,7 +63,7 @@ const Select = (props) => {
     {
       revalidateOnFocus: false,
       revalidateOnReconnect: false,
-    }
+    },
   );
   useEffect(() => {
     if (open) return;
@@ -80,7 +80,7 @@ const Select = (props) => {
         updateStocks({
           field: accessor,
           values: timeseries,
-        })
+        }),
       );
       const display = `${date.month}/${date.day}/${date.year}`;
       dispatch(editHeader({ accessor: accessor, display: display }));
@@ -119,7 +119,7 @@ const Select = (props) => {
           tooltip,
           accessor: accessor,
           active: true,
-        })
+        }),
       );
     }
   };
@@ -129,7 +129,7 @@ const Select = (props) => {
       server +
         "/filers/record/timeseries/?" +
         new URLSearchParams({ cik, time }),
-      "_blank"
+      "_blank",
     );
   };
 
@@ -159,7 +159,7 @@ const Select = (props) => {
       </button>
       <button
         className={[styles["button"], styles["download"], font.className].join(
-          " "
+          " ",
         )}
         onClick={() => handleDownload()}
       >

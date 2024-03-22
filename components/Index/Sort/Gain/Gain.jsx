@@ -48,7 +48,7 @@ const Gain = () => {
         delay: 200,
         tolerance: 6,
       },
-    })
+    }),
   );
 
   const handleDragStart = (e) => {

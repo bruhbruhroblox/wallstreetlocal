@@ -83,7 +83,7 @@ const Progress = (props) => {
         wait: false,
       };
     },
-    { logs: ["Initializing, this may take a while..."], count: 0 }
+    { logs: ["Initializing, this may take a while..."], count: 0 },
   );
   const [wait, setWait] = useState(false);
   const [stop, setStop] = useState(false);
@@ -95,7 +95,7 @@ const Progress = (props) => {
   } = useSWR(
     wait || stop ? null : [server + "/filers/logs", cik, log.count],
     ([url, cik, start]) => logFetcher(url, cik, start),
-    { refreshInterval: 10 * 1000 }
+    { refreshInterval: 10 * 1000 },
   );
 
   useEffect(() => {

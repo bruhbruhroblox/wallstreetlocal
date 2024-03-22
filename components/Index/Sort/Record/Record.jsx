@@ -22,7 +22,12 @@ const Record = (props) => {
   url.searchParams.append("headers", headerString);
 
   return (
-    <Link href={url} target="_blank" className={styles["record-link"]}>
+    <Link
+      href={url}
+      target="_blank"
+      className={styles["record-link"]}
+      legacyBehavior
+    >
       <button className={styles["record-button"]}>
         <span className={[styles["record-text"], font.className].join(" ")}>
           {variant === "csv" ? "Table" : "Data"}

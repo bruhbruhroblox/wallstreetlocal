@@ -8,7 +8,7 @@ import Bar from "components/Bar/Bar";
 
 const Item = ({ link, text, tab }) => (
   <li className={styles["item"] + " " + font.className}>
-    <Link href={link} target={tab ? "_blank" : null}>
+    <Link href={link} target={tab ? "_blank" : null} legacyBehavior>
       {text}
     </Link>
   </li>
@@ -23,7 +23,7 @@ const Navigation = (props) => {
       <nav className={styles["nav"]}>
         <div className={styles["logo"]}>
           <div className={styles["logo-title"]}>
-            <Link href="/">
+            <Link href="/" legacyBehavior>
               <span
                 className={styles["logo-text"] + " " + font.className}
                 id={styles["whale"]}

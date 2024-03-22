@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className={styles["footer"]}>
       <div className={styles["logo"]}>
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <span
             className={styles["logo-text"] + " " + font.className}
             id={styles["whale"]}
@@ -27,6 +27,7 @@ const Footer = () => {
         href="https://ko-fi.com/wallstreetlocal"
         target="_blank"
         className={[styles["donation"], fontLight.className].join(" ")}
+        legacyBehavior
       >
         <span>
           wallstreetlocal is free and open-source, please consider donating.

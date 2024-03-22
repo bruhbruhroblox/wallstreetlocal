@@ -23,7 +23,7 @@ const Search = () => {
       search: "",
       results: [],
       focus: false,
-    }
+    },
   );
 
   const limit = 5;
@@ -33,7 +33,7 @@ const Search = () => {
     {
       revalidateOnFocus: false,
       revalidateOnReconnect: false,
-    }
+    },
   );
   useEffect(() => {
     if (data) {
@@ -67,13 +67,12 @@ const Search = () => {
           input.focus && input.search.length ? styles["results-expand"] : "",
         ].join(" ")}
       >
-
         {
           <ul className={styles["result-list"]}>
             {input.results.map((result) => {
               return (
                 <li key={result.cik}>
-                  <Link href={`/filers/${result.cik}`}>
+                  <Link href={`/filers/${result.cik}`} legacyBehavior>
                     <div className={styles["result"]}>
                       <span className={font.className}>
                         {result.name.toUpperCase()}{" "}
@@ -92,7 +91,6 @@ const Search = () => {
           </ul>
         }
       </div>
-
     </div>
   );
 };

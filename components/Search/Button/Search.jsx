@@ -25,7 +25,7 @@ const Search = () => {
       results: [],
       search: "",
       focus: false,
-    }
+    },
   );
   const [show, setShow] = useState(false);
 
@@ -36,7 +36,7 @@ const Search = () => {
     {
       revalidateOnFocus: false,
       revalidateOnReconnect: false,
-    }
+    },
   );
   useEffect(() => {
     if (data) {
@@ -83,6 +83,7 @@ const Search = () => {
                     <Link
                       href={`/filers/${result.cik}`}
                       onClick={() => setShow(false)}
+                      legacyBehavior
                     >
                       <div className={styles["result"]}>
                         <span className={font.className}>

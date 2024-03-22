@@ -54,14 +54,14 @@ const Index = () => {
         sortHeader({
           sort: a,
           reverse: d,
-        })
+        }),
       ),
     (o) => {
       dispatch(setOffset(o));
     },
     (p) => {
       dispatch(setPagination(p));
-    }
+    },
   );
 
   const [queryStocks, setQueryStocks] = useState(true);

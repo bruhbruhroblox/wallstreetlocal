@@ -34,7 +34,7 @@ const Recommended = (props) => {
       () => {
         setShow(true);
       },
-      true
+      true,
     );
     return () => window.removeEventListener("scroll", () => {}, true);
   }, []);
@@ -57,7 +57,7 @@ const Recommended = (props) => {
       </span>
       <div className={[styles["recommended-lists"], font.className].join(" ")}>
         <div className={styles["recommended-list"]}>
-          <Link href="/recommended/top">
+          <Link href="/recommended/top" legacyBehavior>
             <span className={styles["list-title"]}>Most Assets</span>
           </Link>
           <ul>
@@ -68,7 +68,7 @@ const Recommended = (props) => {
               })
               .map((filer) => (
                 <li className={styles["recommended-item"]}>
-                  <Link href={`/filers/${filer.cik}`}>
+                  <Link href={`/filers/${filer.cik}`} legacyBehavior>
                     <span>{convertTitle(filer.title)}</span>
                   </Link>
                 </li>
@@ -76,7 +76,7 @@ const Recommended = (props) => {
           </ul>
         </div>
         <div className={styles["recommended-list"]}>
-          <Link href="/recommended/searched">
+          <Link href="/recommended/searched" legacyBehavior>
             <span className={styles["list-title"]}>Most Searched</span>
           </Link>
           <ul>
@@ -87,7 +87,7 @@ const Recommended = (props) => {
               })
               .map((filer) => (
                 <li className={styles["recommended-item"]} key={filer.cik}>
-                  <Link href={`/filers/${filer.cik}`}>
+                  <Link href={`/filers/${filer.cik}`} legacyBehavior>
                     <span>{filer.title}</span>
                   </Link>
                 </li>

@@ -61,7 +61,7 @@ const Picker = (props) => {
           type: "year",
           accessor: date.accessor,
           value: dateDisplay,
-        })
+        }),
       );
     }
   };
@@ -114,7 +114,7 @@ const Picker = (props) => {
                   type: "year",
                   accessor: date.accessor,
                   value: year - 1,
-                })
+                }),
               )
             }
           >
@@ -137,7 +137,7 @@ const Picker = (props) => {
                   type: "year",
                   accessor: date.accessor,
                   value: year + 1,
-                })
+                }),
               )
             }
           >
@@ -154,7 +154,7 @@ const Picker = (props) => {
                     type: "month",
                     value: month.value,
                     accessor: date.accessor,
-                  })
+                  }),
                 )
               }
               className={[

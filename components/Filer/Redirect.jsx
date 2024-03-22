@@ -1,10 +1,16 @@
+import { useRouter } from "next/navigation";
 import styles from "@/styles/Filer.module.css";
 import { useEffect } from "react";
 
-import { useRouter } from "next/router";
 import { fontLight } from "@fonts";
 
 import useEllipsis from "components/Hooks/useEllipsis";
+
+// TODO: implement this function
+async function getWait() {}
+
+// TODO: implement this function
+async function getCik() {}
 
 const Redirect = (props) => {
   const cik = props.cik || null;
